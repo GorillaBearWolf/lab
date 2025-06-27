@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: httpd-yaml
+  creationTimestamp: null
   labels:
     app: httpd
-    method: fromcode
+  name: httpd
 spec:
   replicas: 3
   selector:
@@ -13,9 +13,9 @@ spec:
   strategy: {}
   template:
     metadata:
+      creationTimestamp: null
       labels:
         app: httpd
-        method: fromcode
     spec:
       containers:
       - image: httpd:latest

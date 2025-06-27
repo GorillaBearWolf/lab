@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpd-yaml
+  labels:
+    app: httpd
+    method: fromcode
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: httpd
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: httpd
+        method: fromcode
+    spec:
+      containers:
+      - image: httpd:latest
+        name: httpd
+        resources: {}
+status: {}

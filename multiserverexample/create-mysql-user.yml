@@ -1,0 +1,16 @@
+# playbooks/create-mysql-users.yml
+# Create a basic MySQL user with a password
+---
+- name: Create MySQL users
+  hosts: db
+  remote_user: root
+  gather_facts: no
+
+  tasks:
+    - name: Create application user
+      ansible.mysql.mysql_user:
+        name: django
+        password: "12345"
+        host: "%"
+        state: present
+        login_unix_socket: /var/lib/mysql/mysql.sock

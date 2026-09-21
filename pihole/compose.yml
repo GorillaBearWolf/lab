@@ -9,7 +9,6 @@ services:
       - "8081:80"
     environment:
       TZ: "America/Chicago"
-      FTLCONF_webserver_api_password: "changeme"
       FTLCONF_dns_listeningMode: "all"
       FTLCONF_dns_upstreams: "1.1.1.1;9.9.9.9"
     volumes:

@@ -1,7 +1,7 @@
 # Pi-hole configuration file (v6.7.1)
 # Encoding: UTF-8
 # This file is managed by pihole-FTL
-# Last updated on 2026-09-20 15:29:46 CDT
+# Last updated on 2026-09-20 15:29:45 CDT
 
 [dns]
   # Upstream DNS Servers to be used by Pi-hole. If this is not set, Pi-hole will not
@@ -11,10 +11,7 @@
   #
   # Allowed values are:
   #     Array of IP addresses and/or hostnames, optionally with a port (#...)
-  upstreams = [
-    "1.1.1.1",
-    "9.9.9.9"
-  ] ### CHANGED (env), default = []
+  upstreams = []
 
   # Use this option to control deep CNAME inspection. Disabling it might be beneficial
   # for very low-end devices
@@ -211,7 +208,7 @@
   #       configuration file. This is useful if you want to manually configure the
   #       listening mode in auxiliary configuration files. This option is really meant
   #       for advanced users only, support for this option may be limited.
-  listeningMode = "ALL" ### CHANGED (env), default = "LOCAL"
+  listeningMode = "LOCAL"
 
   # Log DNS queries and replies to pihole.log
   #
@@ -1166,7 +1163,7 @@
     #
     # Allowed values are:
     #     A valid Pi-hole password hash
-    pwhash = "$BALLOON-SHA256$v=1$s=1024,t=32$IRfozsGTrdVxTTv2MF7ylQ==$RS4snBtIewhLEESLzHC74ZyoAjZJYkCsySQhSccq7G4=" ### CHANGED, default = ""
+    pwhash = ""
 
     # Pi-hole 2FA TOTP secret. When set to something different than an empty string, 2FA
     # authentication will be enforced for the API and the web interface. This setting is
@@ -1764,8 +1761,6 @@
   all = false
 
 # Configuration statistics:
-# 167 total entries out of which 163 entries are default
-# --> 4 entries are modified
-# 2 entries are forced through environment:
-#   - dns.upstreams
-#   - dns.listeningMode
+# 167 total entries out of which 166 entries are default
+# --> 1 entry is modified
+

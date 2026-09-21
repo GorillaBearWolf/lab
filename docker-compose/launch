@@ -1,0 +1,5 @@
+#!/bin/bash
+
+docker compose -p labspace -f oci://dockersamples/labspace-compose-quickstart up -d
+printf "\nOpen your browser to http://localhost:3030
+Tear down the lab by running: docker compose -p labspace down\n"
